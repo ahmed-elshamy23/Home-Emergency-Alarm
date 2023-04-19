@@ -63,11 +63,11 @@ void validateReadings()
   while (1)
   {
     if (vibration)
-      Serial.println(earthquake);
+      Serial.print(earthquake);
     if (temperature >= TEMPERATURE_THRESHOLD && smoke)
-      Serial.println(fire);
+      Serial.print(fire);
     if (co && lpg)
-      Serial.println(gasLeakage);
+      Serial.print(gasLeakage);
     vTaskDelayUntil(currentTime, VALIDATION_TASK_PERIOD);
   }
 }
